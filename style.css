@@ -1,0 +1,148 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'poppins', sans-serif;
+}
+
+
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:aquamarine;
+    flex-direction: column;
+}
+
+
+
+
+
+.jeu{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    overflow: hidden;
+    border: 0;
+    border-bottom: 1px solid burlywood;
+}
+
+.balon{
+   
+    top: 150;
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    position: relative;
+    top: 2px;
+    left: -30px;
+    border-radius: 50%;
+       
+    }
+
+
+
+
+
+
+.animation{
+    animation: balon-saut 500ms infinite;
+}
+
+
+/*Animation balon saut*/
+@keyframes balon-saut{
+    0%{
+        top:130px;
+    }
+
+    25%{
+        top:80px;
+    }
+    50%{
+        top:80px;
+    }
+
+    100%{
+        top:130;
+    }
+}
+
+
+
+.obstacles{
+    width: 20px;
+    height: 20px;
+    background-color: grey;
+    position: relative;
+    top: 2px;
+    left: 480px;
+    border-radius: 50%;
+    animation: anime-obstacles 2.5s infinite;
+}
+
+/*Animation obstacles*/
+@keyframes anime-obstacles{
+    0%{
+        left: 480px;
+    }
+    100%{
+        left:-40px;
+    }
+}
+.control{
+    margin-top: 20px;
+    text-align: center;
+}
+
+a,button{
+    
+    padding: 10px 50px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0 0 50px black;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: bisque;
+    font-size: 15px;
+    text-decoration: 0;
+    color: black;
+   
+
+}
+
+
+.start{
+    margin: 2px 2px;
+    padding: 1px 2px;
+    background: burlywood;
+    border-radius: 4px;
+    color: cadetblue;
+    border:1px gray;
+    box-shadow: 1px 1px 1px  black;
+    transition:0,3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    animation:shadow-pop-br 0,2s cubic-bezier(0.47, 0, 0.745, 0.715)both ;
+}
+
+
+
+.sauter{
+    margin: 2px 2px;
+    padding: 1px 2px;
+    background: burlywood;
+    border-radius: 4px;
+    color: cadetblue;
+    border:1px gray;
+    box-shadow: 1px 1px 1px  black;
+   
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    animation:balon-saute both;
+}
